@@ -1,0 +1,26 @@
+.hero-track {
+  position: relative;
+  height: 600vh;
+}
+
+.hero-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: var(--navy-950);
+}
+
+.hero-stage canvas {
+  display: block;
+}
+
+.hero-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  box-shadow: inset 0 0 18vw 4vw rgba(2, 3, 8, 0.85);
+  background: radial-gradient(ellipse at center, transparent 45%, rgba(2, 3, 8, 0.55) 100%);
+}

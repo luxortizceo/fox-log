@@ -1,0 +1,105 @@
+:root {
+  --navy-950: #04060c;
+  --navy-900: #070b16;
+  --navy-800: #0c1322;
+  --navy-700: #131c30;
+  --gold-200: #f1e2bb;
+  --gold-300: #e8cf9c;
+  --gold-400: #d4af6a;
+  --gold-500: #c9a664;
+  --gold-600: #a6813f;
+  --ink-100: #f6f3ec;
+  --ink-300: #cdd2dd;
+  --ink-500: #8a91a3;
+  --ink-700: #4b5163;
+
+  --font-display: "Playfair Display", "Times New Roman", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --ease-luxury: cubic-bezier(0.16, 0.7, 0.15, 1);
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--navy-950);
+  color: var(--ink-100);
+  font-family: var(--font-body);
+  /* Note: deliberately NOT overflow-x:hidden here — any ancestor with
+     overflow set breaks position:sticky for the pinned hero canvas below. */
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  position: relative;
+  min-height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.01em;
+  color: var(--ink-100);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--gold-500);
+  color: var(--navy-950);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold-400);
+  font-weight: 500;
+}
+
+.gold-text {
+  background: linear-gradient(120deg, var(--gold-300), var(--gold-500) 45%, var(--gold-200));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 64px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+}

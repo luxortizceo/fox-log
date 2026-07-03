@@ -1,0 +1,73 @@
+.cta {
+  position: relative;
+  background: var(--navy-900);
+  padding: 150px 0;
+  overflow: hidden;
+}
+
+.cta__glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(63, 111, 184, 0.16), transparent 55%);
+  pointer-events: none;
+}
+
+.cta__inner {
+  position: relative;
+  max-width: 640px;
+  text-align: center;
+}
+
+.cta__inner h2 {
+  margin-top: 16px;
+  font-size: clamp(1.9rem, 4vw, 2.9rem);
+  line-height: 1.25;
+}
+
+.cta__inner p {
+  margin-top: 22px;
+  color: var(--ink-500);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.cta__actions {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.cta__button {
+  display: inline-block;
+  padding: 16px 40px;
+  background: transparent;
+  border: 1px solid var(--gold-500);
+  color: var(--gold-300);
+  text-decoration: none;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.3s var(--ease-luxury), color 0.3s, transform 0.3s;
+}
+
+.cta__button:hover {
+  background: var(--gold-500);
+  color: var(--navy-950);
+  transform: translateY(-2px);
+}
+
+.cta__whatsapp {
+  color: var(--ink-500);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  transition: color 0.25s;
+}
+
+.cta__whatsapp:hover {
+  color: #25d366;
+}
